@@ -10,10 +10,7 @@ const BookingPage = () => {
     const [targetedBooking, setTargetedBooking] = useState(null);
 
     useEffect(() => {
-        const currBookings = loadBooking()
-        const combined = [...currBookings, ...dummyBookings]
-
-        setBookings(combined)
+        setBookings(dummyBookings)
     }, []);
 
     const handleRescheduleBooking = (bookingId) => {
