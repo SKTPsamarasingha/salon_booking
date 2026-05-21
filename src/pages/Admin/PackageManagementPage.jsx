@@ -28,8 +28,7 @@ const PackageManagementPage = () => {
                 {/* Header Section */}
                 <div className="mb-10">
                     <p className="uppercase tracking-[0.3em] text-xs text-pink-300 mb-3 font-semibold">
-                        Satin & Stone
-                    </p>
+                        Locks & Co. </p>
 
                     <div className="flex items-center justify-between flex-wrap gap-4">
                         <div>

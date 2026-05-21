@@ -46,7 +46,7 @@ export const AdminPage = () => {
                     className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 border-b border-[#e8e3dc] pb-6">
                     <div>
                         <p className="uppercase tracking-[0.3em] text-xs text-pink-300 mb-2 font-semibold">
-                            Satin & Stone // Control Terminal
+                            Locks & Co. // Control Terminal
                         </p>
                         <h1 className="text-4xl md:text-5xl font-serif text-[#1a1714]">
                             Welcome Back, Admin

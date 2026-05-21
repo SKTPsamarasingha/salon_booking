@@ -8,7 +8,7 @@ import {
     Phone,
     Mail,
 } from "lucide-react";
-import {dummyBookings, services,employees} from "../../api/constant.js";
+import {dummyBookings, services, employees} from "../../api/constant.js";
 
 
 const AppointmentsPage = () => {
@@ -19,8 +19,7 @@ const AppointmentsPage = () => {
             <div className="mb-10">
 
                 <p className="uppercase tracking-[0.3em] text-xs text-pink-300 mb-3">
-                    Satin & Stone
-                </p>
+                    Locks & Co. </p>
 
                 <div className="flex items-center justify-between flex-wrap gap-4">
 
@@ -35,7 +34,8 @@ const AppointmentsPage = () => {
                     </div>
 
                     {/* New Appointment */}
-                    <button className="px-6 py-3 bg-[#1a1714] text-white rounded-2xl hover:bg-black transition-all text-sm">
+                    <button
+                        className="px-6 py-3 bg-[#1a1714] text-white rounded-2xl hover:bg-black transition-all text-sm">
                         + New Appointment
                     </button>
 
@@ -46,9 +46,10 @@ const AppointmentsPage = () => {
             <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8">
 
                 {/* Search */}
-                <div className="md:col-span-2 bg-white border border-[#e8e3dc] rounded-2xl px-4 h-[58px] flex items-center gap-3 shadow-sm">
+                <div
+                    className="md:col-span-2 bg-white border border-[#e8e3dc] rounded-2xl px-4 h-[58px] flex items-center gap-3 shadow-sm">
 
-                    <Search size={18} className="text-[#b0a89e]" />
+                    <Search size={18} className="text-[#b0a89e]"/>
 
                     <input
                         type="text"
@@ -59,7 +60,8 @@ const AppointmentsPage = () => {
                 </div>
 
                 {/* Status */}
-                <select className="bg-white border border-[#e8e3dc] rounded-2xl px-4 text-sm text-[#1a1714] shadow-sm outline-none">
+                <select
+                    className="bg-white border border-[#e8e3dc] rounded-2xl px-4 text-sm text-[#1a1714] shadow-sm outline-none">
 
                     <option>All Status</option>
                     <option>Confirmed</option>
@@ -130,7 +132,8 @@ const AppointmentsPage = () => {
                             {/* Customer */}
                             <div className="flex items-center gap-4 mb-6">
 
-                                <div className="w-14 h-14 rounded-full bg-pink-100 flex items-center justify-center text-[#1a1714] font-semibold text-lg">
+                                <div
+                                    className="w-14 h-14 rounded-full bg-pink-100 flex items-center justify-center text-[#1a1714] font-semibold text-lg">
                                     {booking.details.fullName.charAt(0)}
                                 </div>
 
@@ -143,12 +146,12 @@ const AppointmentsPage = () => {
                                     <div className="flex flex-col gap-1 mt-1">
 
                                         <div className="flex items-center gap-2 text-sm text-[#7a7068]">
-                                            <Mail size={14} />
+                                            <Mail size={14}/>
                                             {booking.details.email}
                                         </div>
 
                                         <div className="flex items-center gap-2 text-sm text-[#7a7068]">
-                                            <Phone size={14} />
+                                            <Phone size={14}/>
                                             {booking.details.phone}
                                         </div>
 
@@ -159,7 +162,7 @@ const AppointmentsPage = () => {
                             </div>
 
                             {/* Divider */}
-                            <div className="h-px bg-[#eee7df] mb-6" />
+                            <div className="h-px bg-[#eee7df] mb-6"/>
 
                             {/* Details */}
                             <div className="grid grid-cols-2 gap-5 mb-6">
@@ -231,7 +234,7 @@ const AppointmentsPage = () => {
                             {/* Notes */}
                             {booking.details.requests && (
                                 <>
-                                    <div className="h-px bg-[#eee7df] mb-5" />
+                                    <div className="h-px bg-[#eee7df] mb-5"/>
 
                                     <div className="mb-6">
 
@@ -250,25 +253,28 @@ const AppointmentsPage = () => {
                             {/* Actions */}
                             <div className="flex items-center gap-3 flex-wrap">
 
-                                <button className="px-5 py-2.5 rounded-xl bg-green-50 text-green-700 border border-green-200 hover:bg-green-100 transition-all text-sm flex items-center gap-2">
+                                <button
+                                    className="px-5 py-2.5 rounded-xl bg-green-50 text-green-700 border border-green-200 hover:bg-green-100 transition-all text-sm flex items-center gap-2">
 
-                                    <CheckCircle2 size={16} />
+                                    <CheckCircle2 size={16}/>
 
                                     Confirm
 
                                 </button>
 
-                                <button className="px-5 py-2.5 rounded-xl bg-red-50 text-red-700 border border-red-200 hover:bg-red-100 transition-all text-sm flex items-center gap-2">
+                                <button
+                                    className="px-5 py-2.5 rounded-xl bg-red-50 text-red-700 border border-red-200 hover:bg-red-100 transition-all text-sm flex items-center gap-2">
 
-                                    <XCircle size={16} />
+                                    <XCircle size={16}/>
 
                                     Cancel
 
                                 </button>
 
-                                <button className="px-5 py-2.5 rounded-xl border border-[#e8e3dc] hover:bg-[#faf7f3] transition-all text-sm flex items-center gap-2">
+                                <button
+                                    className="px-5 py-2.5 rounded-xl border border-[#e8e3dc] hover:bg-[#faf7f3] transition-all text-sm flex items-center gap-2">
 
-                                    <Trash2 size={16} />
+                                    <Trash2 size={16}/>
 
                                     Delete
 

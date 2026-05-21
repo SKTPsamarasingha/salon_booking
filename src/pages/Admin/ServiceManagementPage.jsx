@@ -38,7 +38,7 @@ const ServiceManagementPage = () => {
                 {/* Header Section */}
                 <div className="mb-10">
                     <p className="svc-header-sub uppercase tracking-[0.3em] text-xs text-pink-300 mb-3 font-semibold">
-                        Satin & Stone
+                        Locks & Co.
                     </p>
 
                     <div className="flex items-center justify-between flex-wrap gap-4">

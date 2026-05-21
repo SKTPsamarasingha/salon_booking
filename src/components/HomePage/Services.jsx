@@ -1,6 +1,6 @@
-import React, { useEffect, useRef, useState } from 'react';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import React, {useEffect, useRef, useState} from 'react';
+import {gsap} from 'gsap';
+import {ScrollTrigger} from 'gsap/ScrollTrigger';
 
 // Register ScrollTrigger plugin safely
 if (typeof window !== 'undefined') {
@@ -81,11 +81,11 @@ const ServicesPage = () => {
     useEffect(() => {
         const ctx = gsap.context(() => {
             // 1. Header Text Load Sequence
-            const headerTl = gsap.timeline({ defaults: { ease: 'power4.out' } });
+            const headerTl = gsap.timeline({defaults: {ease: 'power4.out'}});
             headerTl
-                .from('.services-sub', { opacity: 0, y: -15, duration: 0.6 })
-                .from('.services-title', { opacity: 0, y: 25, duration: 0.8 }, '-=0.4')
-                .from('.services-desc', { opacity: 0, y: 15, duration: 0.6 }, '-=0.5');
+                .from('.services-sub', {opacity: 0, y: -15, duration: 0.6})
+                .from('.services-title', {opacity: 0, y: 25, duration: 0.8}, '-=0.4')
+                .from('.services-desc', {opacity: 0, y: 15, duration: 0.6}, '-=0.5');
 
             // 2. ScrollTrigger Grid Stagger Entry
             gsap.from(cardsRef.current, {
@@ -112,13 +112,13 @@ const ServicesPage = () => {
                 {/* Editorial Header */}
                 <div className="text-center mb-16">
                     <p className="services-sub uppercase tracking-[0.35em] text-[10px] text-pink-300 mb-4 font-semibold">
-                        Satin & Stone
-                    </p>
+                        Locks & Co. </p>
                     <h1 className="services-title text-5xl md:text-6xl font-serif text-[#1a1714] mb-5">
                         A la Carte Menu
                     </h1>
                     <p className="services-desc max-w-2xl mx-auto text-[#7a7068] font-light leading-relaxed">
-                        Finely tailored individual wellness experiences targeted to refresh, realign, and elevate your personal care routine.
+                        Finely tailored individual wellness experiences targeted to refresh, realign, and elevate your
+                        personal care routine.
                     </p>
                 </div>
 
@@ -127,7 +127,9 @@ const ServicesPage = () => {
                     {services.map((service, i) => (
                         <div
                             key={service.id}
-                            ref={(el) => { if (el) cardsRef.current[i] = el; }}
+                            ref={(el) => {
+                                if (el) cardsRef.current[i] = el;
+                            }}
                             onMouseEnter={() => setHovered(service.id)}
                             onMouseLeave={() => setHovered(null)}
                             className="relative bg-[#faf9f7] border border-[#e8e3dc] p-8 flex flex-col gap-5 group cursor-pointer transition-colors duration-300 hover:bg-white rounded-2xl overflow-hidden shadow-sm"
@@ -137,7 +139,8 @@ const ServicesPage = () => {
                 <span className="font-serif text-xs tracking-widest text-[#b0a89e]">
                   SERIES // {service.number}
                 </span>
-                                <span className="text-pink-300 text-sm opacity-60 group-hover:rotate-180 group-hover:scale-110 transition-transform duration-500">
+                                <span
+                                    className="text-pink-300 text-sm opacity-60 group-hover:rotate-180 group-hover:scale-110 transition-transform duration-500">
                   {service.icon}
                 </span>
                             </div>

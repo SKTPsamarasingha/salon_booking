@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import {
     Store, Clock, Shield, Bell, CreditCard,
     Save, RefreshCw, Mail, Phone, MapPin,
@@ -10,7 +10,7 @@ const SettingsPage = () => {
     const [isSaving, setIsSaving] = useState(false);
 
     // Mock initial state for form controls
-    const [salonName, setSalonName] = useState('Satin & Stone');
+    const [salonName, setSalonName] = useState('Locks & Co.');
     const [currency, setCurrency] = useState('LKR');
     const [bookingInterval, setBookingInterval] = useState('30');
     const [allowCancellation, setAllowCancellation] = useState(true);
@@ -24,10 +24,10 @@ const SettingsPage = () => {
     };
 
     const navItems = [
-        { id: 'salon', label: 'Salon Profile', icon: Store },
-        { id: 'bookings', label: 'Booking Rules', icon: Clock },
-        { id: 'security', label: 'Security & Access', icon: Shield },
-        { id: 'notifications', label: 'Notifications', icon: Bell },
+        {id: 'salon', label: 'Salon Profile', icon: Store},
+        {id: 'bookings', label: 'Booking Rules', icon: Clock},
+        {id: 'security', label: 'Security & Access', icon: Shield},
+        {id: 'notifications', label: 'Notifications', icon: Bell},
     ];
 
     return (
@@ -38,8 +38,7 @@ const SettingsPage = () => {
                 <div className="flex items-center justify-between flex-wrap gap-4 border-b border-[#e8e3dc] pb-8 mb-10">
                     <div>
                         <p className="uppercase tracking-[0.3em] text-xs text-pink-300 mb-2 font-semibold">
-                            Satin & Stone
-                        </p>
+                            Locks & Co.                        </p>
                         <h1 className="text-4xl font-serif text-[#1a1714]">
                             System Settings
                         </h1>
@@ -51,9 +50,9 @@ const SettingsPage = () => {
                         className="flex items-center gap-2 px-6 py-3 bg-[#1a1714] text-white rounded-2xl hover:bg-black transition-all text-sm font-medium shadow-sm disabled:opacity-50"
                     >
                         {isSaving ? (
-                            <RefreshCw size={16} className="animate-spin" />
+                            <RefreshCw size={16} className="animate-spin"/>
                         ) : (
-                            <Save size={16} />
+                            <Save size={16}/>
                         )}
                         {isSaving ? 'Saving Changes...' : 'Save Configuration'}
                     </button>
@@ -76,7 +75,8 @@ const SettingsPage = () => {
                                             : 'text-[#7a7068] hover:bg-[#faf9f7] hover:text-[#1a1714]'
                                     }`}
                                 >
-                                    <Icon size={16} className={activeSection === item.id ? 'text-pink-400' : 'text-[#b0a89e]'} />
+                                    <Icon size={16}
+                                          className={activeSection === item.id ? 'text-pink-400' : 'text-[#b0a89e]'}/>
                                     <span>{item.label}</span>
                                 </button>
                             );
@@ -91,12 +91,15 @@ const SettingsPage = () => {
                             <div className="space-y-6">
                                 <div>
                                     <h3 className="text-xl font-serif text-[#1a1714] mb-1">Salon Identity & Contact</h3>
-                                    <p className="text-xs text-[#7a7068] font-light">Public profile credentials rendered across external client catalogs.</p>
+                                    <p className="text-xs text-[#7a7068] font-light">Public profile credentials rendered
+                                        across external client catalogs.</p>
                                 </div>
 
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                     <div className="space-y-1.5">
-                                        <label className="text-[10px] uppercase tracking-wider text-[#b0a89e] font-semibold">Brand Moniker</label>
+                                        <label
+                                            className="text-[10px] uppercase tracking-wider text-[#b0a89e] font-semibold">Brand
+                                            Moniker</label>
                                         <input
                                             type="text"
                                             value={salonName}
@@ -106,7 +109,9 @@ const SettingsPage = () => {
                                     </div>
 
                                     <div className="space-y-1.5">
-                                        <label className="text-[10px] uppercase tracking-wider text-[#b0a89e] font-semibold">Active Operating Currency</label>
+                                        <label
+                                            className="text-[10px] uppercase tracking-wider text-[#b0a89e] font-semibold">Active
+                                            Operating Currency</label>
                                         <select
                                             value={currency}
                                             onChange={(e) => setCurrency(e.target.value)}
@@ -120,9 +125,11 @@ const SettingsPage = () => {
                                 </div>
 
                                 <div className="space-y-1.5">
-                                    <label className="text-[10px] uppercase tracking-wider text-[#b0a89e] font-semibold">Physical Location Landmark Address</label>
+                                    <label
+                                        className="text-[10px] uppercase tracking-wider text-[#b0a89e] font-semibold">Physical
+                                        Location Landmark Address</label>
                                     <div className="relative">
-                                        <MapPin size={16} className="absolute left-4 top-3 text-[#b0a89e]" />
+                                        <MapPin size={16} className="absolute left-4 top-3 text-[#b0a89e]"/>
                                         <input
                                             type="text"
                                             defaultValue="No 45, Kandy Road, Kadawatha, Sri Lanka"
@@ -133,9 +140,11 @@ const SettingsPage = () => {
 
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                     <div className="space-y-1.5">
-                                        <label className="text-[10px] uppercase tracking-wider text-[#b0a89e] font-semibold">Roster Central Email</label>
+                                        <label
+                                            className="text-[10px] uppercase tracking-wider text-[#b0a89e] font-semibold">Roster
+                                            Central Email</label>
                                         <div className="relative">
-                                            <Mail size={16} className="absolute left-4 top-3 text-[#b0a89e]" />
+                                            <Mail size={16} className="absolute left-4 top-3 text-[#b0a89e]"/>
                                             <input
                                                 type="email"
                                                 defaultValue="concierge@satinandstone.com"
@@ -145,9 +154,11 @@ const SettingsPage = () => {
                                     </div>
 
                                     <div className="space-y-1.5">
-                                        <label className="text-[10px] uppercase tracking-wider text-[#b0a89e] font-semibold">Hotline Desk Telephone</label>
+                                        <label
+                                            className="text-[10px] uppercase tracking-wider text-[#b0a89e] font-semibold">Hotline
+                                            Desk Telephone</label>
                                         <div className="relative">
-                                            <Phone size={16} className="absolute left-4 top-3 text-[#b0a89e]" />
+                                            <Phone size={16} className="absolute left-4 top-3 text-[#b0a89e]"/>
                                             <input
                                                 type="tel"
                                                 defaultValue="+94 11 234 5678"
@@ -163,13 +174,17 @@ const SettingsPage = () => {
                         {activeSection === 'bookings' && (
                             <div className="space-y-6">
                                 <div>
-                                    <h3 className="text-xl font-serif text-[#1a1714] mb-1">Calendar & Booking Thresholds</h3>
-                                    <p className="text-xs text-[#7a7068] font-light">Dictate auto-assignment intervals, cancellation locks, and calendar grid structures.</p>
+                                    <h3 className="text-xl font-serif text-[#1a1714] mb-1">Calendar & Booking
+                                        Thresholds</h3>
+                                    <p className="text-xs text-[#7a7068] font-light">Dictate auto-assignment intervals,
+                                        cancellation locks, and calendar grid structures.</p>
                                 </div>
 
                                 <div className="space-y-4">
                                     <div className="space-y-1.5">
-                                        <label className="text-[10px] uppercase tracking-wider text-[#b0a89e] font-semibold">Default Time Slot Increment</label>
+                                        <label
+                                            className="text-[10px] uppercase tracking-wider text-[#b0a89e] font-semibold">Default
+                                            Time Slot Increment</label>
                                         <select
                                             value={bookingInterval}
                                             onChange={(e) => setBookingInterval(e.target.value)}
@@ -182,10 +197,13 @@ const SettingsPage = () => {
                                     </div>
 
                                     {/* Toggle Control Block */}
-                                    <div className="flex items-center justify-between p-4 bg-[#f8f5f0] rounded-xl border border-[#eee7df]">
+                                    <div
+                                        className="flex items-center justify-between p-4 bg-[#f8f5f0] rounded-xl border border-[#eee7df]">
                                         <div>
-                                            <p className="text-sm font-medium text-[#1a1714]">Allow Digital Self-Cancellation</p>
-                                            <p className="text-xs text-[#7a7068] font-light">Enables clients to cancel online without manual admin override steps.</p>
+                                            <p className="text-sm font-medium text-[#1a1714]">Allow Digital
+                                                Self-Cancellation</p>
+                                            <p className="text-xs text-[#7a7068] font-light">Enables clients to cancel
+                                                online without manual admin override steps.</p>
                                         </div>
                                         <button
                                             type="button"
@@ -194,15 +212,19 @@ const SettingsPage = () => {
                                                 allowCancellation ? 'bg-pink-400' : 'bg-[#b0a89e]'
                                             }`}
                                         >
-                      <span className={`pointer-events-none inline-block h-5 w-5 transform rounded-full bg-white shadow-sm ring-0 transition duration-200 ease-in-out ${
-                          allowCancellation ? 'translate-x-5' : 'translate-x-0'
-                      }`} />
+                      <span
+                          className={`pointer-events-none inline-block h-5 w-5 transform rounded-full bg-white shadow-sm ring-0 transition duration-200 ease-in-out ${
+                              allowCancellation ? 'translate-x-5' : 'translate-x-0'
+                          }`}/>
                                         </button>
                                     </div>
 
                                     <div className="space-y-1.5">
-                                        <label className="text-[10px] uppercase tracking-wider text-[#b0a89e] font-semibold">Cancellation Time Guard Lockout</label>
-                                        <select className="w-full bg-[#f8f5f0] border border-[#e8e3dc] rounded-xl px-4 py-2.5 text-sm outline-none text-[#1a1714] focus:border-pink-300 cursor-pointer">
+                                        <label
+                                            className="text-[10px] uppercase tracking-wider text-[#b0a89e] font-semibold">Cancellation
+                                            Time Guard Lockout</label>
+                                        <select
+                                            className="w-full bg-[#f8f5f0] border border-[#e8e3dc] rounded-xl px-4 py-2.5 text-sm outline-none text-[#1a1714] focus:border-pink-300 cursor-pointer">
                                             <option>Up to 12 hours before appointment slot</option>
                                             <option>Up to 24 hours before appointment slot</option>
                                             <option>Up to 48 hours before appointment slot</option>
@@ -216,15 +238,19 @@ const SettingsPage = () => {
                         {activeSection === 'security' && (
                             <div className="space-y-6">
                                 <div>
-                                    <h3 className="text-xl font-serif text-[#1a1714] mb-1">Administrative Password & Access</h3>
-                                    <p className="text-xs text-[#7a7068] font-light">Update operational gateway tokens and restrict secure panel credentials.</p>
+                                    <h3 className="text-xl font-serif text-[#1a1714] mb-1">Administrative Password &
+                                        Access</h3>
+                                    <p className="text-xs text-[#7a7068] font-light">Update operational gateway tokens
+                                        and restrict secure panel credentials.</p>
                                 </div>
 
                                 <div className="space-y-4">
                                     <div className="space-y-1.5">
-                                        <label className="text-[10px] uppercase tracking-wider text-[#b0a89e] font-semibold">Current Secure Keyphrase</label>
+                                        <label
+                                            className="text-[10px] uppercase tracking-wider text-[#b0a89e] font-semibold">Current
+                                            Secure Keyphrase</label>
                                         <div className="relative">
-                                            <Lock size={16} className="absolute left-4 top-3 text-[#b0a89e]" />
+                                            <Lock size={16} className="absolute left-4 top-3 text-[#b0a89e]"/>
                                             <input
                                                 type="password"
                                                 placeholder="••••••••••••"
@@ -234,9 +260,11 @@ const SettingsPage = () => {
                                     </div>
 
                                     <div className="space-y-1.5">
-                                        <label className="text-[10px] uppercase tracking-wider text-[#b0a89e] font-semibold">New Gateway Passphrase</label>
+                                        <label
+                                            className="text-[10px] uppercase tracking-wider text-[#b0a89e] font-semibold">New
+                                            Gateway Passphrase</label>
                                         <div className="relative">
-                                            <Lock size={16} className="absolute left-4 top-3 text-[#b0a89e]" />
+                                            <Lock size={16} className="absolute left-4 top-3 text-[#b0a89e]"/>
                                             <input
                                                 type="password"
                                                 className="w-full bg-[#f8f5f0] border border-[#e8e3dc] rounded-xl pl-11 pr-4 py-2.5 text-sm outline-none text-[#1a1714] focus:border-pink-300"
@@ -252,16 +280,27 @@ const SettingsPage = () => {
                             <div className="space-y-6">
                                 <div>
                                     <h3 className="text-xl font-serif text-[#1a1714] mb-1">Automated Communications</h3>
-                                    <p className="text-xs text-[#7a7068] font-light">Configure SMS dispatch triggers and client confirmation email sequences.</p>
+                                    <p className="text-xs text-[#7a7068] font-light">Configure SMS dispatch triggers and
+                                        client confirmation email sequences.</p>
                                 </div>
 
                                 <div className="space-y-3">
                                     {[
-                                        { title: 'Booking Request Instants', desc: 'Dispatches confirmation receipts immediately upon payment captures.' },
-                                        { title: 'Stylist Roster Reminder Shifts', desc: 'Alerts master technicians when appointments are created or modified.' },
-                                        { title: '24-Hour Automated Follow-up Care', desc: 'Sends digital feedback links to clients after service checkouts.' }
+                                        {
+                                            title: 'Booking Request Instants',
+                                            desc: 'Dispatches confirmation receipts immediately upon payment captures.'
+                                        },
+                                        {
+                                            title: 'Stylist Roster Reminder Shifts',
+                                            desc: 'Alerts master technicians when appointments are created or modified.'
+                                        },
+                                        {
+                                            title: '24-Hour Automated Follow-up Care',
+                                            desc: 'Sends digital feedback links to clients after service checkouts.'
+                                        }
                                     ].map((item, index) => (
-                                        <label key={index} className="flex items-start gap-3 p-4 bg-[#f8f5f0] border border-[#eee7df] rounded-xl cursor-pointer hover:bg-[#faf9f7] transition-all">
+                                        <label key={index}
+                                               className="flex items-start gap-3 p-4 bg-[#f8f5f0] border border-[#eee7df] rounded-xl cursor-pointer hover:bg-[#faf9f7] transition-all">
                                             <input
                                                 type="checkbox"
                                                 defaultChecked
