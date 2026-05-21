@@ -1,0 +1,28 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="goldGradient" x1="0" y1="0" x2="512" y2="512" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#F5D78E"/>
+            <stop offset="1" stop-color="#B88A44"/>
+        </linearGradient>
+    </defs>
+
+    <!-- Outer Circle -->
+    <circle cx="256" cy="256" r="220" stroke="url(#goldGradient)" stroke-width="12"/>
+
+    <!-- Satin Flow Shape -->
+    <path d="M180 180C230 120 330 120 360 190C385 245 350 300 285 320C235 335 210 365 215 410"
+          stroke="url(#goldGradient)"
+          stroke-width="16"
+          stroke-linecap="round"
+          stroke-linejoin="round"/>
+
+    <!-- Stone Accent -->
+    <path d="M190 320C160 285 150 240 170 205"
+          stroke="url(#goldGradient)"
+          stroke-width="10"
+          stroke-linecap="round"/>
+
+    <!-- Decorative Spark -->
+    <path d="M355 125L365 150L390 160L365 170L355 195L345 170L320 160L345 150L355 125Z"
+          fill="url(#goldGradient)"/>
+</svg>

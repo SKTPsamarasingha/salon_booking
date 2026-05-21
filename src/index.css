@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Instrument+Serif:ital@0;1&family=Manrope:wght@200..800&display=swap');
+@import "tailwindcss";
+
+@theme {
+    /* Colors */
+    --color-off-white: #F3F4F4;
+    --color-dark: #1b1d1e;
+    --color-grey: #999999;
+    --color-red: #d0021b;
+
+    /* Fonts */
+    --font-sans: "Be Vietnam Pro", sans-serif;
+    --font-heading: "Cormorant Garamond", serif;
+    --font-italic: "Instrument Serif", serif;
+    --font-alt: "Manrope", sans-serif;
+}
+
+@layer base {
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        font-family: var(--font-sans);
+        line-height: 1.5;
+        background-color: var(--color-off-white);
+        color: var(--color-dark);
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+    }
+
+    img {
+        max-width: 100%;
+        display: block;
+    }
+
+    button,
+    input,
+    textarea,
+    select {
+        font: inherit;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    ul,
+    ol {
+        list-style: none;
+    }
+}
+@layer utilities {
+    .smooth-transition {
+        transition-property: all;
+        transition-duration: 300ms;
+        transition-timing-function: cubic-bezier(0, 0, 0.2, 1); /* standard ease-out */
+    }
+}
