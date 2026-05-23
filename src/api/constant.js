@@ -22,42 +22,44 @@ export const employees = [
         role: "Master Colourist",
         bio: "Trained in Lyon and Tokyo. Isabelle's balayage work has been featured in Vogue and Harper's Bazaar.",
         specialty: "Balayage · Colour Correction",
-        img: "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=500&q=80",
+        img: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1200&auto=format&fit=crop",
         years: "9 yrs",
         tags: ["hair", "bridal"]
     },
+
     {
         id: 2,
         name: "Kenji Arao",
         role: "Lead Skin Therapist",
         bio: "Kenji's minimalist skincare philosophy draws from Japanese aesthetics — less intervention, more illumination.",
         specialty: "Hydrafacial · LED Therapy",
-        img: "https://images.unsplash.com/photo-1607990281513-2c110a25bd8c?w=500&q=80",
+        img: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1200&auto=format&fit=crop",
         years: "7 yrs",
         tags: ["skin", "body"]
     },
+
     {
         id: 3,
         name: "Sofia Vance",
         role: "Bridal Specialist",
         bio: "Sofia has styled over 300 brides. She believes every wedding look should feel timeless, never trendy.",
         specialty: "Bridal · Upstyles",
-        img: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=500&q=80",
+        img: "https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?q=80&w=1200&auto=format&fit=crop",
         years: "11 yrs",
         tags: ["bridal", "hair", "lash"]
     },
+
     {
         id: 4,
         name: "Marc Delacroix",
         role: "Precision Cutter",
         bio: "Marc's architectural cuts are known for their clean geometry and effortless movement.",
         specialty: "Precision Cut · Texture",
-        img: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=500&q=80",
+        img: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1200&auto=format&fit=crop",
         years: "6 yrs",
         tags: ["hair", "nails"]
     },
 ];
-
 export const services = [
     {
         id: 1,
@@ -168,42 +170,51 @@ export const packages = [
         features: ['Luxury Wash & Blow Dry', 'Mini Facial', 'Nail Care', 'Eyebrow Styling'],
         popular: false,
     },
+
 ];
 
 
 export const galleryItems = [
     {
         id: 1,
-        src: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&q=80",
+        src: "https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=2400&auto=format&fit=crop",
         label: "Balayage",
         span: "row-span-2",
     },
+
     {
         id: 2,
-        src: "https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=600&q=80",
+        src: "https://images.unsplash.com/photo-1515377905703-c4788e51af15?q=80&w=2400&auto=format&fit=crop",
         label: "Skin Ritual",
         span: "",
     },
+
     {
         id: 3,
-        src: "https://images.unsplash.com/photo-1519415943484-9fa1873496d4?w=600&q=80",
+        src: "https://images.unsplash.com/photo-1604654894610-df63bc536371?q=80&w=2400&auto=format&fit=crop",
         label: "Nail Couture",
         span: "",
     },
+
     {
         id: 4,
-        src: "https://images.unsplash.com/photo-1492106087820-71f1a00d2b11?w=600&q=80",
+        src: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=2400&auto=format&fit=crop",
         label: "Bridal",
         span: "col-span-2",
     },
+
     {
         id: 5,
-        src: "https://images.unsplash.com/photo-1634643836960-c345b3c3e998?w=600&q=80",
+        src: "https://images.unsplash.com/photo-1512496015851-a90fb38ba796?q=80&w=2400&auto=format&fit=crop",
         label: "Lash & Brow",
+        span: "col-span-2"    },
+    {
+        id: 6,
+        src: "https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?q=80&w=2400&auto=format&fit=crop",
+        label: "Hair Styling",
         span: "",
-    },
+    }
 ];
-
 export const testimonials = [
     {
         id: 1,
