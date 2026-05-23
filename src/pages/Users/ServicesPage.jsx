@@ -96,10 +96,10 @@ const ServicesPage = () => {
 
             {/* Editorial Header */}
             <div className="text-center mb-16">
-                <p className="services-sub uppercase tracking-[0.35em] text-[10px] text-pink-300 mb-4 font-semibold">
-                    Lock & co.
-                </p>
-                <h1 className="services-title text-5xl md:text-6xl font-serif text-[#1a1714] mb-5">
+                {/*<p className="services-sub uppercase tracking-[0.35em] text-[10px] text-pink-300 mb-4 font-semibold">*/}
+                {/*    Lock & co.*/}
+                {/*</p>*/}
+                <h1 className="mt-10 services-title text-5xl md:text-6xl font-serif text-[#1a1714] mb-5">
                     A la Carte Menu
                 </h1>
                 <p className="services-desc max-w-2xl mx-auto text-[#7a7068] font-light leading-relaxed">

@@ -57,6 +57,15 @@
     ol {
         list-style: none;
     }
+    .text-gradient {
+        background: linear-gradient(to top, #000000, #a1a1aa, #ffffff);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-fill-color: transparent;
+        display: inline-block; /* Crucial metric to retain clipping masks */
+    }
+
 }
 @layer utilities {
     .smooth-transition {
@@ -64,4 +73,22 @@
         transition-duration: 300ms;
         transition-timing-function: cubic-bezier(0, 0, 0.2, 1); /* standard ease-out */
     }
+    .text-gradient {
+        background: linear-gradient(to top, #000000, #a1a1aa, #ffffff);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-fill-color: transparent;
+        display: inline-block; /* Crucial metric to retain clipping masks */
+    }
+
+}
+
+.text-gradient {
+    background: linear-gradient(to top, #000000, #a1a1aa, #ffffff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+    display: inline-block; /* Crucial metric to retain clipping masks */
 }

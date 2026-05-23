@@ -71,12 +71,15 @@ const PackagesShort = () => {
 
                 {/* Editorial Header (Structural Sync with ServicesPage) */}
                 <div className="text-center mb-16">
-                    <p className="packages-sub uppercase tracking-[0.35em] text-[10px] text-pink-300 mb-4 font-semibold">
-                        Locks & Co.
-                    </p>
-                    <h1 className="packages-title text-4xl md:text-5xl font-serif text-[#1a1714] mb-4">
+                    {/*<p className="packages-sub uppercase tracking-[0.35em] text-[10px] text-pink-300 mb-4 font-semibold">*/}
+                    {/*    Locks & Co.*/}
+                    {/*</p>*/}
+
+                    <h1 className="mt-10 services-title text-5xl md:text-6xl font-serif text-[#1a1714] mb-5">
                         Luxury Packages
                     </h1>
+
+
                     <p className="packages-desc max-w-xl mx-auto text-[#7a7068] font-light text-sm leading-relaxed">
                         Elevated beauty bundles curated for seamless relaxation.
                     </p>

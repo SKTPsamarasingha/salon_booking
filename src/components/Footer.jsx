@@ -53,7 +53,26 @@ const Footer = () => {
                 {/* Massive Full-Width Logo Typography Display Box Mask */}
                 <div className="w-full select-none overflow-hidden border-b border-white/10 pb-4">
                     <div className="overflow-hidden block w-full">
-                        <h1 className="footer-main-heading opacity-0 text-[12vw] font-bold tracking-wider uppercase leading-none text-center font-heading origin-bottom">
+                        <h1
+                            className="
+          footer-main-heading
+          opacity-0
+          text-[12vw]
+          font-bold
+          tracking-wider
+          uppercase
+          leading-none
+          text-center
+          font-heading
+          origin-bottom
+          bg-gradient-to-t
+          from-black
+          via-zinc-400
+          to-white
+          bg-clip-text
+          text-transparent
+        "
+                        >
                             LOCKS & CO.
                         </h1>
                     </div>

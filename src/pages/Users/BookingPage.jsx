@@ -64,12 +64,13 @@ const BookingPage = () => {
 
                 {/* Editorial Header (Exactly matching ServicesPage structure) */}
                 <div className="text-center mb-16">
-                    <p className="bookings-sub uppercase tracking-[0.35em] text-[10px] text-pink-300 mb-4 font-semibold">
-                        Lock & co.
-                    </p>
-                    <h1 className="bookings-title text-5xl md:text-6xl font-serif text-[#1a1714] mb-5">
-                        Your <span className="italic text-pink-300">Appointments</span>
+                    {/*<p className="bookings-sub uppercase tracking-[0.35em] text-[10px] text-pink-300 mb-4 font-semibold">*/}
+                    {/*    Lock & co.*/}
+                    {/*</p>*/}
+                    <h1 className="mt-10 services-title text-5xl md:text-6xl font-serif text-[#1a1714] mb-5">
+                        Your Appointments
                     </h1>
+
                     <p className="bookings-desc max-w-2xl mx-auto text-[#7a7068] font-light leading-relaxed">
                         View, reschedule, or cancel your upcoming scheduled wellness sessions. Review details and
                         modifications below.

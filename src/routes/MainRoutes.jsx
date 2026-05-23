@@ -5,6 +5,7 @@ import {Route, Routes} from 'react-router-dom';
 import MainLayout from '../layouts/MainLayout.jsx';
 import AdminLayout from '../layouts/AdminLayout.jsx';
 import PageLoader from '../components/common/PageLoader.jsx';
+import ScrollToTop from "../components/common/ScrollToTop.jsx";
 
 // Lazy loaded User Pages
 const HomePage = lazy(() => import('../pages/Users/HomePage.jsx'));
@@ -27,6 +28,8 @@ const SettingsPage = lazy(() => import('../pages/Admin/SettingsPage.jsx'));
 const AllRoutes = () => {
     return (
         <Suspense fallback={<PageLoader/>}>
+            <ScrollToTop/>
+
             <Routes>
                 {/* Public / User Routes */}
                 <Route element={<MainLayout/>}>
