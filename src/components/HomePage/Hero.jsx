@@ -1,20 +1,20 @@
-import { useEffect, useRef, useState } from "react";
+import {useEffect, useRef, useState} from "react";
 import gsap from "gsap";
 import PrimaryBtn from "../common/PrimaryBtn.jsx";
 import {SplitText} from "gsap/all";
 
 
-const Hero = ({ setIsOpen }) => {
+const Hero = ({setIsOpen}) => {
     const compRef = useRef(null);
     const [showIntroMarkup, setShowIntroMarkup] = useState(true);
 
     useEffect(() => {
-        const hasAnimated = sessionStorage.getItem("hero-animation-done");
-
+        // const hasAnimated = sessionStorage.getItem("hero-animation-done");
+        const hasAnimated = false
         if (hasAnimated) {
             setShowIntroMarkup(false);
-            gsap.set(".hero-bg", { opacity: 1, scale: 1 });
-            gsap.set(".hero-reveal", { opacity: 1, y: 0 });
+            gsap.set(".hero-bg", {opacity: 1, scale: 1});
+            gsap.set(".hero-reveal", {opacity: 1, y: 0});
             window.dispatchEvent(new Event("heroLoaded"));
             return;
         }
@@ -31,7 +31,7 @@ const Hero = ({ setIsOpen }) => {
             intro.chars.forEach(char => char.classList.add("text-gradient"));
 
             const tl = gsap.timeline({
-                defaults: { ease: "power4.inOut" },
+                defaults: {ease: "power4.inOut"},
                 onComplete: () => {
                     sessionStorage.setItem("hero-animation-done", "true");
                     window.dispatchEvent(new Event("heroLoaded"));
@@ -59,13 +59,13 @@ const Hero = ({ setIsOpen }) => {
                 }, "+=0.5")
 
                 // 5. Short atmospheric freeze interval pause frame
-                .to({}, { duration: 0.6 })
+                .to({}, {duration: 0.6})
 
                 // 6. Smooth cinematic backdrop reveal
                 .fromTo(
                     ".hero-bg",
-                    { scale: 1.15, opacity: 0 },
-                    { scale: 1, opacity: 1, duration: 1.8, ease: "power3.out" }
+                    {scale: 1.15, opacity: 0},
+                    {scale: 1, opacity: 1, duration: 1.8, ease: "power3.out"}
                 )
 
                 // 7. Prompt navbar to gracefully drop into view
@@ -76,8 +76,8 @@ const Hero = ({ setIsOpen }) => {
                 // 8. Stagger final layout content descriptions into frame
                 .fromTo(
                     ".hero-reveal",
-                    { y: 40, opacity: 0 },
-                    { y: 0, opacity: 1, duration: 1.2, stagger: 0.15, ease: "power3.out" },
+                    {y: 40, opacity: 0},
+                    {y: 0, opacity: 1, duration: 1.2, stagger: 0.15, ease: "power3.out"},
                     "+=0.2"
                 );
 
@@ -116,15 +116,16 @@ const Hero = ({ setIsOpen }) => {
             </div>
 
             {/* Editorial Content Blocks */}
-            <div className="relative z-20 w-full max-w-7xl mx-auto px-6 md:px-12 flex flex-col items-start gap-6 text-white mt-16">
+            <div
+                className="relative z-20 w-full max-w-7xl mx-auto px-6 md:px-12 flex flex-col items-start gap-6 text-white mt-16">
 
                 {/* Main Headline */}
                 <h2 className="hero-reveal opacity-0 text-4xl sm:text-6xl lg:text-7xl font-light tracking-wide max-w-3xl leading-[1.1]">
-                    Where beauty is <br />
+                    Where beauty is <br/>
                     <span className="font-serif italic font-normal text-pink-200">
                         not a transformation,
                     </span>
-                    <br />
+                    <br/>
                     but a revelation.
                 </h2>
 
@@ -136,14 +137,18 @@ const Hero = ({ setIsOpen }) => {
 
                 {/* CTA Buttons */}
                 <div className="hero-reveal opacity-0 flex flex-wrap items-center gap-4 mt-2 w-full sm:w-auto">
-                    <PrimaryBtn fn={() => { setIsOpen(true) }} text="Book Your Visit" />
-                    <button className="px-8 py-3 border border-white/30 text-white text-sm tracking-widest uppercase hover:bg-white/10 transition-all cursor-pointer backdrop-blur-sm">
+                    <PrimaryBtn fn={() => {
+                        setIsOpen(true)
+                    }} text="Book Your Visit"/>
+                    <button
+                        className="px-8 py-3 border border-white/30 text-white text-sm tracking-widest uppercase hover:bg-white/10 transition-all cursor-pointer backdrop-blur-sm">
                         Explore Services
                     </button>
                 </div>
 
                 {/* Trust Indicators */}
-                <div className="hero-reveal opacity-0 flex flex-wrap items-center gap-8 mt-6 pt-6 border-t border-white/20">
+                <div
+                    className="hero-reveal opacity-0 flex flex-wrap items-center gap-8 mt-6 pt-6 border-t border-white/20">
                     <div className="flex flex-col gap-1">
                         <span className="text-2xl font-serif font-light text-white">12+</span>
                         <span className="text-[10px] tracking-[0.25em] uppercase text-gray-300/60">Years Mastery</span>
